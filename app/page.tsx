@@ -31,6 +31,7 @@ export default function Home() {
               title="Random Fox"
               className="rounded-lg shadow-lg m-4 bg-gray-300"
               onClick={(e)=> console.log(e)}
+              onLazyLoad= {(e)=> console.log("loaded", e)}
               />
           </div>))}
       </main>

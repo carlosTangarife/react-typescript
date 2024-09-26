@@ -4,14 +4,12 @@ import { useState, } from "react";
 import type { MouseEventHandler } from "react";
 import { generedateId, randomNumber } from "./utils";
 
-type ImageItem = { id: string, url: string };
-
 export default function Home() {
-  const [images, setImages] = useState<Array<ImageItem>>([]);
+  const [images, setImages] = useState<Array<IFoxImageItem>>([]);
 
   const addNewFox: MouseEventHandler<HTMLButtonElement> | undefined = (event): void => {
     event.preventDefault();
-    const newImageItem: ImageItem = { id: generedateId(), url: `https://randomfox.ca/images/${randomNumber()}.jpg` };
+    const newImageItem: IFoxImageItem = { id: generedateId(), url: `https://randomfox.ca/images/${randomNumber()}.jpg` };
     setImages([...images, newImageItem]);
   }
 

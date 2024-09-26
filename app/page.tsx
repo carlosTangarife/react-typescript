@@ -2,7 +2,6 @@
 import { RandomFox } from "./components/RandomFox";
 import { useState, } from "react";
 import type { MouseEventHandler } from "react";
-
 import { generedateId, randomNumber } from "./utils";
 
 type ImageItem = { id: string, url: string };
@@ -23,7 +22,7 @@ export default function Home() {
         <button onClick={addNewFox}>
           Add Fox
         </button>
-        {images.map(image => <div className="p-4 bg-white rounded-lg shadow-lg" key={image.id}> <RandomFox imageUrl={image.url} /> </div>)}
+        {images.map(image => <div className="bg-white rounded-lg shadow-lg" key={image.id}> <RandomFox imageUrl={image.url} /> </div>)}
       </main>
     </div>
   );
